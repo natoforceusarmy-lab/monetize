@@ -52,7 +52,7 @@ header {
 
 .logo-circle::after {
   content: 'f';
-  font-size: 46px;
+  font-size: 68px;
   font-weight: 900;
   font-family: 'Nunito', Arial, sans-serif;
   color: white;
