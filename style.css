@@ -38,20 +38,19 @@ header {
 
 /* Logo circle like Facebook */
 .logo-circle {
-  width: 70px;               /* slightly larger circle */
-  height: 70px;
-  background: #1877f2;        /* Facebook blue */
+  width: 60px;
+  height: 60px;
+  background: #1877f2;   /* Facebook blue */
   color: white;
-  border-radius: 50%;
+  border-radius: 50%;    /* full circle */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 46px;            /* bigger letter */
-  font-weight: 900;           /* extra bold */
-  font-family: 'Nunito', Arial, sans-serif;
-  text-transform: lowercase;
-  transform: scaleX(1.1);     /* makes it look wider */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 80px;       /* slightly bigger so it breathes */
+  font-weight: 700;      /* extra bold for curve strength */
+  font-family: "Nunito", "Poppins", "Helvetica Neue", sans-serif; /* rounded look */
+  text-transform: lowercase;  /* optional: makes letters more curvy */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* soft depth, like FB */
   margin: 0 auto 20px;
 }
 
