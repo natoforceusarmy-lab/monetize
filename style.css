@@ -38,8 +38,8 @@ header {
 
 /* Logo circle like Facebook */
 .logo-circle {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   background: #1877f2; /* Facebook blue */
   border-radius: 50%;
   position: relative;
@@ -52,7 +52,7 @@ header {
 
 .logo-circle::after {
   content: 'f';
-  font-size: 68px;
+  font-size: 55px;
   font-weight: 900;
   font-family: 'Nunito', Arial, sans-serif;
   color: white;
