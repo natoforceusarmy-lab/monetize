@@ -1,77 +1,115 @@
+/* Import rounded Google Font (better than Arial) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', Arial, sans-serif;
   background-color: #f0f2f5;
   margin: 0;
   padding: 0;
   text-align: center;
+  color: #1c1e21; /* softer black, like FB */
 }
+
+/* Header bar */
 header {
   background-color: #1877f2;
-  padding: 12px;
+  padding: 14px;
   color: white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
+/* Card container */
 .container {
   max-width: 400px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 24px;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px; /* more rounded */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+/* Logo section */
 .logo {
   margin: 20px 0;
 }
+
 /* Logo circle like Facebook */
 .logo-circle {
-  width: 60px;
-  height: 60px;
-  background: #1877f2;  /* Facebook blue */
+  width: 64px;
+  height: 64px;
+  background: #1877f2;
   color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  text-transform: lowercase;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   margin: 0 auto 20px;
 }
+
+/* Inputs */
 input, select, textarea {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccd0d5;
+  border-radius: 10px; /* more curved */
   font-size: 1rem;
   box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+input:focus, select:focus, textarea:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 3px rgba(24,119,242,0.2);
+  outline: none;
+}
+
+/* Buttons */
 button {
   width: 100%;
   padding: 14px;
   background-color: #1877f2;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px; /* more curved */
   font-size: 1rem;
+  font-weight: 600;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 12px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
+
 button:hover {
   background-color: #166fe5;
 }
-footer {
-  margin: 20px 0;
-  font-size: 0.8rem;
-  color: #666;
+
+button:active {
+  transform: scale(0.98); /* small click effect */
 }
+
+/* Footer */
+footer {
+  margin: 24px 0;
+  font-size: 0.85rem;
+  color: #65676b;
+}
+
+/* Mobile adjustments */
 @media (max-width: 480px) {
   .container {
     margin: 20px;
-    padding: 15px;
+    padding: 18px;
   }
   input, button {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     padding: 12px;
   }
 }
