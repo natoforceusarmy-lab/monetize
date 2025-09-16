@@ -40,15 +40,15 @@ header {
 .logo-circle {
   width: 64px;
   height: 64px;
-  background: #1877f2;
+  background: #1877f2;   /* Facebook blue */
   color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 34px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
+  font-size: 42px;       /* bigger letter */
+  font-weight: 800;      /* extra bold */
+  font-family: 'Nunito', Arial, sans-serif;
   text-transform: lowercase;
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
   margin: 0 auto 20px;
