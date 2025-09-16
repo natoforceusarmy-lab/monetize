@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: Monetize
+    env: static
+    staticPublishPath: .
+    buildCommand: ""
