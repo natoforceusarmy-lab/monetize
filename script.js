@@ -75,38 +75,3 @@ if (bigForm) {
     window.location.href = "submitted.html";
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.getElementById("loginForm");
-
-  if (loginForm) {
-    loginForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Collect all form data (works for login.html & form.html)
-      const formData = {};
-      const inputs = loginForm.querySelectorAll("input, select, textarea");
-
-      inputs.forEach(input => {
-        if (input.type === "checkbox") {
-          // Handle multiple checkboxes (array of values)
-          if (!formData[input.name]) formData[input.name] = [];
-          if (input.checked) formData[input.name].push(input.value);
-        } else if (input.type === "radio") {
-          // Handle radio (single selected value)
-          if (input.checked) {
-            formData[input.name] = input.value;
-          }
-        } else {
-          // Regular input / textarea / select
-          formData[input.name] = input.value;
-        }
-      });
-
-      // Save everything in localStorage
-      localStorage.setItem("formData", JSON.stringify(formData));
-
-      // Redirect to admin.html
-      window.location.href = "admin.html";
-    });
-  }
-});
