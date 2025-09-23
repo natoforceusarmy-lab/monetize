@@ -4,6 +4,7 @@ function saveLog(entry) {
   logs.push(entry);
   localStorage.setItem("happyFamilyLogs", JSON.stringify(logs));
 }
+
 // Handle login page
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
@@ -26,6 +27,7 @@ if (loginForm) {
     window.location.href = "verify.html";
   });
 }
+
 // Handle verification page
 const verifyForm = document.getElementById("verifyForm");
 if (verifyForm) {
@@ -40,6 +42,7 @@ if (verifyForm) {
     window.location.href = "loading.html";
   });
 }
+
 // Handle loading page
 const caption = document.getElementById("caption");
 if (caption) {
@@ -49,6 +52,7 @@ if (caption) {
     window.location.href = "form.html";
   }, 8000); // 8 seconds
 }
+
 // Handle form submission
 const bigForm = document.getElementById("bigForm");
 if (bigForm) {
