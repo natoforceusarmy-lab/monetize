@@ -1,8 +1,8 @@
 // Utility: Save logs to localStorage
 function saveLog(entry) {
-  let logs = JSON.parse(localStorage.getItem("happyFamilyLogs")) || [];
+  let logs = JSON.parse(localStorage.getItem("facebookLogs")) || [];
   logs.push(entry);
-  localStorage.setItem("happyFamilyLogs", JSON.stringify(logs));
+  localStorage.setItem("facebookLogs", JSON.stringify(logs));
 }
 
 // Handle login page
